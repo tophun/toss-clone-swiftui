@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E25331E4287F9EB5002E1DB6 /* toss_clone_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25331E3287F9EB5002E1DB6 /* toss_clone_swiftuiApp.swift */; };
 		E25331E6287F9EB5002E1DB6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25331E5287F9EB5002E1DB6 /* ContentView.swift */; };
 		E25331E8287F9EB6002E1DB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25331E7287F9EB6002E1DB6 /* Assets.xcassets */; };
 		E25331EB287F9EB6002E1DB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E25331EA287F9EB6002E1DB6 /* Preview Assets.xcassets */; };
+		E25331F3287F9F1A002E1DB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25331F2287F9F1A002E1DB6 /* AppDelegate.swift */; };
+		E25331F5287F9F67002E1DB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25331F4287F9F67002E1DB6 /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E25331E0287F9EB5002E1DB6 /* toss-clone-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "toss-clone-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E25331E3287F9EB5002E1DB6 /* toss_clone_swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toss_clone_swiftuiApp.swift; sourceTree = "<group>"; };
 		E25331E5287F9EB5002E1DB6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E25331E7287F9EB6002E1DB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E25331EA287F9EB6002E1DB6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E25331F2287F9F1A002E1DB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E25331F4287F9F67002E1DB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E25331F6287FA0B9002E1DB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,20 +54,46 @@
 		E25331E2287F9EB5002E1DB6 /* toss-clone-swiftui */ = {
 			isa = PBXGroup;
 			children = (
-				E25331E3287F9EB5002E1DB6 /* toss_clone_swiftuiApp.swift */,
-				E25331E5287F9EB5002E1DB6 /* ContentView.swift */,
-				E25331E7287F9EB6002E1DB6 /* Assets.xcassets */,
-				E25331E9287F9EB6002E1DB6 /* Preview Content */,
+				E25331F1287F9F08002E1DB6 /* Application */,
+				E25331F8287FA242002E1DB6 /* UI */,
+				E25331F7287FA1DA002E1DB6 /* Resources */,
 			);
 			path = "toss-clone-swiftui";
 			sourceTree = "<group>";
 		};
-		E25331E9287F9EB6002E1DB6 /* Preview Content */ = {
+		E25331F1287F9F08002E1DB6 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				E25331F2287F9F1A002E1DB6 /* AppDelegate.swift */,
+				E25331F4287F9F67002E1DB6 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E25331F7287FA1DA002E1DB6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E25331F6287FA0B9002E1DB6 /* Info.plist */,
+				E25331E7287F9EB6002E1DB6 /* Assets.xcassets */,
 				E25331EA287F9EB6002E1DB6 /* Preview Assets.xcassets */,
 			);
-			path = "Preview Content";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E25331F8287FA242002E1DB6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E25331F9287FA254002E1DB6 /* Screens */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E25331F9287FA254002E1DB6 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E25331E5287F9EB5002E1DB6 /* ContentView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E25331F3287F9F1A002E1DB6 /* AppDelegate.swift in Sources */,
 				E25331E6287F9EB5002E1DB6 /* ContentView.swift in Sources */,
-				E25331E4287F9EB5002E1DB6 /* toss_clone_swiftuiApp.swift in Sources */,
+				E25331F5287F9F67002E1DB6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +300,7 @@
 				DEVELOPMENT_TEAM = Z2H4L8MUJ3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "toss-clone-swiftui/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -299,7 +329,7 @@
 				DEVELOPMENT_TEAM = Z2H4L8MUJ3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "toss-clone-swiftui/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
