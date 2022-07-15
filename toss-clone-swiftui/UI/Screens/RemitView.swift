@@ -9,7 +9,15 @@ import SwiftUI
 
 struct RemitView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ZStack {
+                Color.yellow
+                VStack(alignment: .leading, spacing: 0) {
+                    
+                }
+            }
+            .navigationBarHidden(true)
+        }
     }
 }
 

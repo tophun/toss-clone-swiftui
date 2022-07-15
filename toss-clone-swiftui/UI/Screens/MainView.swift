@@ -7,43 +7,68 @@
 
 import SwiftUI
 
+enum TabType: CaseIterable {
+    case home
+    case benefit
+    case remit
+    case stock
+    case all
+    
+    var imageName: String {
+        switch self {
+        case .home:
+            return "house.fill"
+        case .benefit:
+            return "heart.fill"
+        case .remit:
+            return "paperplane.fill"
+        case .stock:
+            return "chart.bar.xaxis"
+        case .all:
+            return "list.bullet"
+        }
+    }
+    
+    var title: String {
+        switch self {
+        case .home:
+            return "홈"
+        case .benefit:
+            return "혜택"
+        case .remit:
+            return "송금"
+        case .stock:
+            return "주식"
+        case .all:
+            return "전체"
+        }
+    }
+}
+
 struct MainView: View {
+    @State var selectedTab: TabType = .home
+    
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Label("홈", systemImage: "house.fill")
-                        .labelStyle(.titleAndIcon)
-                }
-                .edgesIgnoringSafeArea(.top)
-            
-            BenefitView()
-                .tabItem {
-                    Label("혜택", systemImage: "heart.fill")
-                        .labelStyle(.titleAndIcon)
-                }
-                .edgesIgnoringSafeArea(.top)
-            
-            RemitView()
-                .tabItem {
-                    Label("송금", systemImage: "paperplane.fill")
-                        .labelStyle(.titleAndIcon)
-                }
-                .edgesIgnoringSafeArea(.top)
-            
-            StockView()
-                .tabItem {
-                    Label("주식", systemImage: "chart.bar.xaxis")
-                        .labelStyle(.titleAndIcon)
-                }
-                .edgesIgnoringSafeArea(.top)
-            
-            AllView()
-                .tabItem {
-                    Label("전체", systemImage: "list.bullet")
-                        .labelStyle(.titleAndIcon)
-                }
-                .edgesIgnoringSafeArea(.top)
+        ZStack(alignment: .bottom) {
+            switch selectedTab {
+            case .home:
+                HomeView()
+            case .benefit:
+                BenefitView()
+            case .remit:
+                RemitView()
+            case .stock:
+                StockView()
+            case .all:
+                AllView()
+            }
+            TabBarView(selectedTab: $selectedTab)
+            .background {
+                RoundedCornersShape(corners: [.topLeft, .topRight], radius: 15)
+                    .fill(Color.white)
+                    .shadow(color: .black.opacity(0.3), radius: 10, x: 0, y: 0)
+                    .mask(Rectangle().padding(.top, -20))
+            }
         }
     }
 }

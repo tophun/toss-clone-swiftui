@@ -9,7 +9,15 @@ import SwiftUI
 
 struct AllView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ZStack {
+                Color.blue
+                VStack(alignment: .leading, spacing: 0) {
+                    
+                }
+            }
+            .navigationBarHidden(true)
+        }
     }
 }
 
